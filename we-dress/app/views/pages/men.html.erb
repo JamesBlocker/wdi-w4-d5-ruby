@@ -1,0 +1,18 @@
+<h1><%= @title %></h1>
+
+<h2>Tops</h2>
+<h3>Shirts for him</h3>
+<ul>
+<% @inventory.each do |item|%>
+    <% if item[:men_or_women] == "men"%>
+    <li><%= item[:name]%></li>
+    <% end %>
+<% end %>
+
+</ul>
+
+<h2>Bottoms</h2>
+<h3>Pants for him</h3>
+
+<h2>Shoes</h2>
+<h3>Kicks for him</h3>
