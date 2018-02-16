@@ -1,0 +1,30 @@
+<ul>
+    <li><%= @address %></li>
+    <li><%= @phone %></li>
+</ul>
+
+<% today = Date.today.strftime("%a") %>
+<% @store_hours.each do |date|%>
+<ul>
+    <% if date[:day ][0..2] == today %>
+        <li>*<%= date[:day ]%></li> 
+    <% else %>
+        <li><%= date[:day ]%></li> 
+    <% end %>  
+    <ul>
+        <li><%= date[:open ]%></li>
+        <li><%= date[:close ]%></li>
+    </ul>
+</ul>
+<% end %>
+
+
+<form>
+  Name:<br>
+  <input type="text" name="name"><br>
+  Email Address:<br>
+  <input type="text" name="email"><br>
+  Comment:<br>
+  <input type="text" name="password"><br>
+  <input type="submit" value="Submit">
+</form>
