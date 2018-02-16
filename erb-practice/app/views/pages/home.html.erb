@@ -1,0 +1,13 @@
+<h1>Pages#home</h1>
+<p>Find me in app/views/pages/home.html.erb</p>
+
+<ul>
+<% @flavors.each do |flavor| %>
+    <li>
+        <ul>
+            <li><%= flavor[:name ]%></li>
+            <li><%= flavor[:manufacturer ]%></li>
+        </ul>
+    </li>
+<% end %>
+</ul>
